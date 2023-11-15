@@ -12,7 +12,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "provenance": false
+    "provenance": true
   },
   "author": "",
   "license": "ISC"
