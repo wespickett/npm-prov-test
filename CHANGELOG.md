@@ -1,5 +1,11 @@
 # npm-provenance-test1
 
+## 0.0.5
+
+### Patch Changes
+
+- bump4
+
 ## 0.0.4
 
 ### Patch Changes
