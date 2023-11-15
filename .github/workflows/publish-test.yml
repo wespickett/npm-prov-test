@@ -34,7 +34,6 @@ jobs:
         npm -v
         npm whoami
         npm config list
-      shell: bash
 
       # https://github.com/changesets/action#with-publishing
     - name: Handle Release Pull Request or Publish to npm
@@ -53,12 +52,11 @@ jobs:
       run: |
         npm whoami
         npm config list
-      shell: bash
 
       # Upload log files as an artifact
     - name: Upload npm log files
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: npm-logs
         path: /home/runner/.npm/_logs/*.log
