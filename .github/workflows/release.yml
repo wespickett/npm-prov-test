@@ -55,11 +55,6 @@ jobs:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-    - name: Install node modules
-      run: |
-        npm whoami
-        npm config list
-
       # Upload log files as an artifact
     - name: Upload npm log files
       if: always()
