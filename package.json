@@ -1,0 +1,23 @@
+{
+  "name": "npm-provenance-test2",
+  "version": "0.0.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "release:publish": "changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wespickett/npm-prov-test.git"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "author": "",
+  "license": "ISC"
+}
