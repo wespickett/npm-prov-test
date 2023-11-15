@@ -29,7 +29,11 @@ jobs:
       run: npm install -g npm@^9.5.0
 
     - name: Install node modules
-      run: yarn install --frozen-lockfile
+      run: |
+        yarn install --frozen-lockfile
+        npm -v
+        npm whoami
+        npm config list
       shell: bash
 
       # https://github.com/changesets/action#with-publishing
@@ -45,10 +49,16 @@ jobs:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         NPM_CONFIG_PROVENANCE: true
 
+    - name: Install node modules
+      run: |
+        npm whoami
+        npm config list
+      shell: bash
+
       # Upload log files as an artifact
     - name: Upload npm log files
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: npm-logs
         path: /home/runner/.npm/_logs/*.log
